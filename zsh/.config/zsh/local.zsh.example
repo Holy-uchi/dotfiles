@@ -1,0 +1,8 @@
+# machine-specific overrides live here
+# examples:
+# export EDITOR="nvim"
+# export CF_TUNNEL_ENV_FILE="$HOME/.secrets/cloudflared/op.env"
+# alias oripaweb='docker exec -it oripa_road-web-1 /bin/bash'
+# alias oripadb='docker exec -it my_mysql_container /bin/bash'
+# alias oripa='cursor /Users/kojihoriuchi/Coding/work/zencard/epicpull.code-workspace'
+# alias gs='git status -sb'

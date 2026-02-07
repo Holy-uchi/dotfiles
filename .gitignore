@@ -1,0 +1,20 @@
+.DS_Store
+*.swp
+*.tmp
+
+# secret files
+*.env
+*.env.*
+!.env.example
+!.env.*.example
+**/secrets/**
+**/.secrets/**
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# keep local Solana config out of dotfiles
+solana/

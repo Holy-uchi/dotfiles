@@ -1,0 +1,7 @@
+# display間移動
+hyper - h : yabai -m display --focus west   
+hyper - j : yabai -m display --focus south  
+hyper - k : yabai -m display --focus north 
+hyper - l : yabai -m display --focus east
+
+

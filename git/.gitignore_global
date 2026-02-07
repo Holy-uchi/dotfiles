@@ -1,0 +1,14 @@
+# OS / editor noise
+.DS_Store
+*~
+*.swp
+*.swo
+
+# Local workspace files
+.idea/
+.vscode/
+
+# Local secrets
+.env
+.env.*
+*.local

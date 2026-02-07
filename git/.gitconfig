@@ -1,0 +1,19 @@
+[include]
+	path = ~/.gitconfig.local
+[core]
+	excludesfile = ~/.gitignore_global
+
+[http]
+	postBuffer = 524288000
+[merge]
+	ff = false
+[push]
+	default = simple
+	autoSetupRemote = true
+[pull]
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
