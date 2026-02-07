@@ -61,6 +61,19 @@ _jump_list_numbered() {
   done < <(_jump_entries)
 }
 
+_jump_touch() {
+  local target="$1"
+  local tmp="${JUMP_DB_FILE}.tmp.$$"
+  {
+    printf "%s\n" "$target"
+    awk -v p="$target" 'NF > 0 && $0 != p' "$JUMP_DB_FILE"
+  } > "$tmp" || {
+    rm -f -- "$tmp"
+    return 1
+  }
+  mv -- "$tmp" "$JUMP_DB_FILE" || return 1
+}
+
 _jump_add() {
   _jump_init_db || return 1
 
@@ -71,11 +84,12 @@ _jump_add() {
   }
 
   if grep -Fxq -- "$target" "$JUMP_DB_FILE"; then
-    echo "already registered: $target"
+    _jump_touch "$target" || return 1
+    echo "already registered (moved to top): $target"
     return 0
   fi
 
-  printf "%s\n" "$target" >> "$JUMP_DB_FILE"
+  _jump_touch "$target" || return 1
   echo "registered: $target"
 }
 
@@ -150,6 +164,8 @@ _jump_go() {
     echo "remove it with: jump del \"$target\""
     return 1
   fi
+
+  _jump_touch "$target" || return 1
   cd "$target" || return 1
 }
 
