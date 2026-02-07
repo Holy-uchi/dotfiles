@@ -13,7 +13,10 @@ Personal workstation as code.
 - `~/.gitconfig` -> `git/.gitconfig`
 - `~/.gitconfig.local` -> local-only (not tracked)
 - `~/.gitignore_global` -> `git/.gitignore_global`
+- `~/.tmux.conf` -> `tmux/.tmux.conf`
+- `~/.tmux-cheatsheet` -> `tmux/.tmux-cheatsheet`
 - `~/.config/nvim` -> `nvim/.config/nvim`
+- `~/Library/Application Support/com.mitchellh.ghostty/config` -> `ghostty/.config/ghostty/config`
 - `~/.config/karabiner/karabiner.json` -> `karabiner/.config/karabiner/karabiner.json`
 - `~/.config/skhd/skhdrc` -> `skhd/.config/skhd/skhdrc`
 - Homebrew packages -> `Brewfile`
@@ -98,11 +101,13 @@ The installer creates `~/.gitconfig.local` from `git/.gitconfig.local.example` i
 dotfiles/
 ├── Brewfile
 ├── bootstrap.sh
+├── ghostty/
 ├── install.sh
 ├── git/
 ├── karabiner/
 ├── nvim/
 ├── scripts/
 ├── skhd/
+├── tmux/
 └── zsh/
 ```

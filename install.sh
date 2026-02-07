@@ -94,7 +94,10 @@ link_path "$DOTFILES_DIR/zsh/.config/zsh/functions.zsh" "$HOME/.config/zsh/funct
 link_path "$DOTFILES_DIR/zsh/.config/zsh/banner.zsh" "$HOME/.config/zsh/banner.zsh"
 link_path "$DOTFILES_DIR/git/.gitconfig" "$HOME/.gitconfig"
 link_path "$DOTFILES_DIR/git/.gitignore_global" "$HOME/.gitignore_global"
+link_path "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
+link_path "$DOTFILES_DIR/tmux/.tmux-cheatsheet" "$HOME/.tmux-cheatsheet"
 link_path "$DOTFILES_DIR/nvim/.config/nvim" "$HOME/.config/nvim"
+link_path "$DOTFILES_DIR/ghostty/.config/ghostty/config" "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 link_path "$DOTFILES_DIR/karabiner/.config/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
 link_path "$DOTFILES_DIR/skhd/.config/skhd/skhdrc" "$HOME/.config/skhd/skhdrc"
 ensure_local_zsh

@@ -1,0 +1,32 @@
+tmux quick cheatsheet (Prefix = Ctrl-b)
+
+Sessions
+  tmux new -s mysession      create named session
+  tmux ls                    list sessions
+  tmux attach -t mysession   attach session
+  Prefix d                   detach
+
+Windows
+  Prefix c                   create window
+  Prefix n / p               next / previous window
+  Prefix w                   choose window
+  Prefix ,                   rename window
+  Prefix &                   kill window
+
+Panes
+  Prefix %                   split vertical
+  Prefix "                   split horizontal
+  Prefix o                   move to next pane
+  Prefix ;                   toggle last pane
+  Prefix x                   kill pane
+  Prefix z                   zoom/unzoom pane
+
+Copy / Scroll
+  Prefix [                   enter copy mode
+  q                          quit copy mode
+  /                          search forward in copy mode
+  n / N                      next / previous match
+
+Help
+  Prefix h                   open this cheatsheet popup
+  Prefix ?                   list all key bindings
